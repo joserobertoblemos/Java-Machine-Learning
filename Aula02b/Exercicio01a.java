@@ -63,10 +63,14 @@ public class Exercicio01a {
             System.out.println("Produto: " + produtos.get(i) + " | quantidade: " + quantidade.get(i) + " | valor: " + valores.get(i));
         }
 
+        // --- DESAFIO: Apresente a soma das quantidades dos produtos restantes ---
         int soma = 0;
-        for (int i = 0; i < 5; i++){
-            System.out.println("Soma dos Produtos: " + soma +  quantidade.get(i));
+
+        // Usamos produtos.size() para garantir que o laço percorra exatamente o tamanho atual da lista
+        for (int i = 0; i < produtos.size(); i++) {
+        soma += quantidade.get(i); // Acumula a quantidade de cada produto restante
         }
 
+    System.out.println("Soma total das quantidades dos produtos restantes: " + soma);
     } 
 }
